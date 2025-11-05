@@ -1,6 +1,9 @@
 # app.py
 from flask import Flask, render_template
-import json
+import json,platform,config
+from gevent.pywsgi import WSGIServer
+
+
 app = Flask(__name__)
 
 # Дані резюме (можна уявити, що це приходить з бази даних або JSON)
@@ -29,15 +32,24 @@ def load_data(lang):
     except Exception as e:
         print(f"❌ Виникла несподівана помилка: {e}")
 
-RESUME_DATA = load_data('ukr')
+RESUME_DATA = load_data('ua')
 
 @app.route('/')
 @app.route('/<lang>')
 def index(lang='ua'):
     RESUME_DATA = load_data(lang)
-    print(lang)
     return render_template('index.html', resume=RESUME_DATA, current_lang=lang)
+#
+# if __name__ == '__main__':
+#     # Встановіть debug=True для автоматичного перезавантаження під час змін
+#     app.run()
 
-if __name__ == '__main__':
-    # Встановіть debug=True для автоматичного перезавантаження під час змін
-    app.run(debug=True)
+########### MAIN ##############################################
+if __name__ == "__main__":
+    if platform.system() == 'Windows':
+        http_server = WSGIServer((config.local_ip,config.server_port), app)
+        print(f"Running HTTP-SERVER on port - http://" + config.local_ip + ':' + str(config.server_port))
+    else:
+        http_server = WSGIServer(('', int(config.server_port)), app)
+        print(f"Running HTTP-SERVER on port :" + str(config.server_port))
+    http_server.serve_forever()
