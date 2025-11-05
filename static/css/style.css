@@ -1,0 +1,98 @@
+/* static/css/style.css */
+
+/* 1. Базові стилі та типографіка */
+body {
+    /* Використовуємо чистий, професійний шрифт, наприклад, Sans-serif */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f4f7f6; /* Дуже світлий сірий фон для контрасту */
+    line-height: 1.6;
+    color: #333; /* Темно-сірий текст */
+}
+
+/* 2. Загальні елементи Bootstrap (для чистішого вигляду) */
+.container {
+    max-width: 1200px; /* Обмежуємо ширину для кращої читабельності */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* 3. Оформлення карток та колонок */
+.card {
+    border: none; /* Прибираємо стандартну рамку Bootstrap */
+    border-radius: 12px; /* Трохи округлюємо кути */
+    transition: transform 0.3s ease;
+}
+
+.card-shadow-sm {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Легка тінь */
+}
+
+/* 4. Кольорова схема та акценти */
+/* Основний колір, який використовується для заголовків та акцентів (можна обрати фірмовий колір) */
+:root {
+    --primary-color: #007bff; /* Класичний синій (для посилань, кнопок) */
+    --accent-color: #17a2b8; /* Бірюзовий (для значків/тегів) */
+    --text-color: #333;
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+/* Стилізація головних заголовків секцій */
+h3.border-bottom {
+    border-bottom: 3px solid var(--primary-color) !important;
+    padding-bottom: 5px !important;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* 5. Стилі для лівої колонки (Контакти та Навички) */
+.col-lg-4 .card {
+    background-color: #e9ecef; /* Світло-сірий фон для виділення лівої панелі */
+}
+
+.col-lg-4 .list-unstyled li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+/* 6. Стилізація значків (Badges) */
+.badge.bg-info {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+/* 7. Стилі для секції Досвіду */
+.col-lg-8 h4 {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.col-lg-8 ul {
+    list-style: none; /* Прибираємо стандартні маркери */
+    padding-left: 20px;
+}
+
+.col-lg-8 ul li::before {
+    content: "•"; /* Створюємо власний маркер (пункт) */
+    color: var(--primary-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Стиль для посилань */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}

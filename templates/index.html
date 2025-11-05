@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <div class="row mb-3"> <div class="col-12 d-flex justify-content-center">
+            <a href="/ua" class="nav-link px-2 py-0 fs-6
+                {% if current_lang == 'ua' %}fw-bold text-primary{% else %}text-secondary{% endif %}">UA</a>
+            <span class="text-muted mx-1 py-0">|</span>
+            <a href="/en" class="nav-link px-2 py-0 fs-6
+                {% if current_lang == 'en' %}fw-bold text-primary{% else %}text-secondary{% endif %}">EN</a>
+        </div>
+    </div>
+
+    <div class="row"></div>
+
+    <title>{{ resume.name }} | {{ resume.title }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card shadow-sm p-4 mb-4 bg-light">
+                    <h1 class="display-5">{{ resume.name }}</h1>
+                    <p class="lead text-primary mb-4">{{ resume.title }}</p>
+
+                    <h5 class="mt-3 text-secondary">{{ resume.contacts_title }}</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-envelope-fill me-2"></i> e-mail: {{ resume.contacts.email }}</li>
+                        <li><i class="bi bi-phone-fill me-2"></i> tel: {{ resume.contacts.phone }}</li>
+                        <li><i class="bi me-2"></i> age: {{ resume.contacts.age }}</li>
+                        <li><i class="bi me-2"></i> city: {{ resume.contacts.city }}</li>
+                        <li><i class="bi bi-linkedin me-2"></i> <a href="https://{{ resume.contacts.linkedin }}" target="_blank">LinkedIn</a></li>
+                        <li><i class="bi bi-github me-2"></i> <a href="https://{{ resume.contacts.github }}" target="_blank">GitHub</a></li>
+                    </ul>
+
+                    <hr>
+
+                    <h5 class="mt-4 text-secondary">{{ resume.skills_title }}</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        {% for skill in resume.skills %}
+                            <span class="badge bg-info text-dark">{{ skill }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="p-4">
+
+                    <h3 class="border-bottom pb-2 mb-3 text-primary">{{ resume.about_title }}</h3>
+                    <p>{{ resume.summary }}</p>
+                    <h3 class="border-bottom pb-2 mt-5 mb-4 text-primary">{{ resume.experience_title }}</h3>
+                    {% for job in resume.experience %}
+                        <div class="mb-4">
+                            <h4 class="mb-0">{{ job.role }} <small class="text-muted">в {{ job.company }}</small></h4>
+                            <p class="text-muted fst-italic">{{ job.years }}</p>
+                            <ul>
+                                {% for item in job.description %}
+                                    <li>{{ item }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endfor %}
+                    <h3 class="border-bottom pb-2 mt-5 mb-4 text-primary">{{ resume.education_title }}</h3>
+                    {% for education in resume.education %}
+                        <div class="mb-4">
+                            <span class="mb-4">{{  education.ed }}</span></br>
+                            <span class="mb-0">{{  education.univer }}</span></br>
+                            <span class="mb-0">{{  education.facultet }}</span></br>
+                            <span class="mb-0">{{  education.period }}</span></br>
+                            <span class="mb-0">{{  education.level }}</span></br>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivrajs.com/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</body>
+</html>
