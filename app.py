@@ -3,13 +3,7 @@ from flask import Flask, render_template
 import json,platform,config
 from gevent.pywsgi import WSGIServer
 
-
 app = Flask(__name__)
-
-# Дані резюме (можна уявити, що це приходить з бази даних або JSON)
-
-
-
 
 def load_data(lang):
     file_path = 'data.json'
@@ -17,9 +11,7 @@ def load_data(lang):
         file_path = 'data_en.json'
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
-            # Змінна 'data' тепер міститиме вміст JSON як словник або список Python
             data = json.load(file)
-
         print(f"✅ Дані успішно завантажено зі '{file_path}' у змінну.")
         print(f"Тип змінної: {type(data)}")
         # Приклад доступу до даних (якщо це словник)
@@ -39,10 +31,6 @@ RESUME_DATA = load_data('ua')
 def index(lang='ua'):
     RESUME_DATA = load_data(lang)
     return render_template('index.html', resume=RESUME_DATA, current_lang=lang)
-#
-# if __name__ == '__main__':
-#     # Встановіть debug=True для автоматичного перезавантаження під час змін
-#     app.run()
 
 ########### MAIN ##############################################
 if __name__ == "__main__":

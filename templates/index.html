@@ -31,9 +31,9 @@
                     <h5 class="mt-3 text-secondary">{{ resume.contacts_title }}</h5>
                     <ul class="list-unstyled">
                         <li><i class="bi bi-envelope-fill me-2"></i> e-mail: {{ resume.contacts.email }}</li>
-                        <li><i class="bi bi-phone-fill me-2"></i> tel: {{ resume.contacts.phone }}</li>
-                        <li><i class="bi me-2"></i> age: {{ resume.contacts.age }}</li>
-                        <li><i class="bi me-2"></i> city: {{ resume.contacts.city }}</li>
+                        <li><i class="bi bi-phone-fill me-2"></i> {{ resume.contacts.phone_title }} : {{ resume.contacts.phone }}</li>
+                        <li><i class="bi me-2"></i> {{ resume.contacts.age_title }} : {{ resume.contacts.age }}</li>
+                        <li><i class="bi me-2"></i> {{ resume.contacts.city_title }} : {{ resume.contacts.city }}</li>
                         <li><i class="bi bi-linkedin me-2"></i> <a href="https://{{ resume.contacts.linkedin }}" target="_blank">LinkedIn</a></li>
                         <li><i class="bi bi-github me-2"></i> <a href="https://{{ resume.contacts.github }}" target="_blank">GitHub</a></li>
                     </ul>

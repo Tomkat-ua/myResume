@@ -1,4 +1,3 @@
-
 {
     "about_title": "About me",
     "name": "Viacheslav Kostevych",
@@ -6,8 +5,11 @@
     "contacts_title": "Contacts",
     "contacts": {
         "email": "tomkat.s@gmail.com",
+        "phone_title" : "tel.",
         "phone": "+380 67 417 9947",
+        "age_title": "age",
         "age": 48,
+        "city_title": "city",
         "city": "Kyiv",
         "linkedin": "",
         "github": ""
