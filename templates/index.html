@@ -44,6 +44,12 @@
                             <span class="badge bg-info text-dark">{{ skill }}</span>
                         {% endfor %}
                     </div>
+                    <h5 class="mt-4 text-secondary">{{ resume.langs_title }}</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        {% for lang in resume.langs %}
+                            <span class="badge bg-info text-dark">{{ lang }}</span>
+                        {% endfor %}
+                    </div>
                 </div>
             </div>
 

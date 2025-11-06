@@ -86,7 +86,9 @@
 
     "skills_title" : "Навички",
     "skills": ["PostgreSQL","Oracle","Firebird","Informix","Python","С#","Delphi", "Flask" ,"Bootstrap", "Git", "Docker",
-                "Kubernetes","Grafana","Home automation","Electronics","Home Assistent"]
+                "Kubernetes","Grafana","Home automation","Electronics","Home Assistent"],
+    "langs_title" : "Володіння мовами",
+    "langs": ["Українська - рідна","Російська - вільно","Англійська - середньо"]
 }
 
 
