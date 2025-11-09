@@ -86,8 +86,8 @@
         }
     ],
     "skills_title" : "Skills",
-    "skills": ["PostgreSQL","Oracle","Firebird","Informix","Python", "Flask" ,"Bootstrap", "Git", "Docker",
-                "Kubernetes","Grafana","Home automation","Electronics","Home Assistent"],
+    "skills": ["PostgreSQL","Oracle","Firebird","Informix","Python","С#","Delphi", "Flask" ,"Bootstrap", "Git","CI/CD",
+                "Docker","Kubernetes","Grafana","Home automation","Electronics","Home Assistent"],
     "langs_title" : "Language skills",
     "langs": ["Ukrainian - native","Russian - high","English - middle"]
 }
