@@ -13,8 +13,7 @@ def load_data(lang):
         with open(file_path, 'r', encoding='utf-8') as file:
             data = json.load(file)
         print(f"✅ Дані успішно завантажено зі '{file_path}' у змінну.")
-        print(f"Тип змінної: {type(data)}")
-        # Приклад доступу до даних (якщо це словник)
+        # print(f"Тип змінної: {type(data)}")
         # print(f"Ключі у змінній: {python_variable.keys()}")
         return data
     except FileNotFoundError:
@@ -32,29 +31,6 @@ def index(lang='ua'):
     RESUME_DATA = load_data(lang)
     return render_template('index.html', resume=RESUME_DATA, current_lang=lang)
 
-
-# @app.route('/pdf/<string:lang>')
-# def generate_pdf(lang):
-#     # 1. Визначення динамічного base_url
-#     # request.url_root поверне повну URL-адресу, включаючи протокол (http:// або https://),
-#     # доменне ім'я та порт (наприклад, http://yourdomain.com/ або https://127.0.0.1:5000/)
-#     base_url = request.url_root
-#
-#     # 2. Рендеримо HTML-шаблон
-#     html_rendered = render_template('index.html',
-#                                     resume=RESUME_DATA,
-#                                     current_lang=lang,
-#                                     is_pdf=True)
-#
-#     # 3. Генеруємо PDF, використовуючи динамічний base_url
-#     pdf_file = HTML(string=html_rendered, base_url=base_url).write_pdf()
-#
-#     # 4. Формуємо відповідь
-#     response = make_response(pdf_file)
-#     response.headers['Content-Type'] = 'application/pdf'
-#     response.headers['Content-Disposition'] = f'attachment; filename=resume_{lang}.pdf'
-#
-#     return response
 ########### MAIN ##############################################
 if __name__ == "__main__":
     if platform.system() == 'Windows':

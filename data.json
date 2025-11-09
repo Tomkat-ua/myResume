@@ -15,7 +15,7 @@
         "github": ""
         },
     "summary":
-        "Досвідчений Database розробник з 25+ роками досвіду, спеціалізується на Python (Flask), Firebird, Oracle, MariaDB, PostgeSQL. Другою спеціалізацією є розгортання мікросервісної архітектури та побудова систем збору та обробки аналітичної  інформації",
+        "Досвідчений Database розробник з 25+ роками досвіду, спеціалізується на Python (Flask), Firebird, Oracle, MariaDB, PostgeSQL. Другою спеціалізацією є розгортання мікросервісної архітектури та побудова систем збору та обробки аналітичної  інформації з використанням БД Clickhouse, Prometheus, Grafana, MQTT",
     "experience_title" : "Досвід роботи",
     "experience": [
         {
@@ -90,7 +90,7 @@
 
     "skills_title" : "Навички",
     "skills": ["PostgreSQL","Oracle","Firebird","Informix","Python","С#","Delphi", "Flask" ,"Bootstrap", "Git","CI/CD",
-                "Docker","Kubernetes","Grafana","Home automation","Electronics","Home Assistent"],
+                "Docker","Kubernetes","Grafana","Prometheus","Home automation","Electronics","Home Assistant","MQTT"],
     "langs_title" : "Володіння мовами",
     "langs": ["Українська - рідна","Російська - вільно","Англійська - середньо"]
 }

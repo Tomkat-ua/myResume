@@ -14,7 +14,7 @@
         "linkedin": "",
         "github": ""
         },
-    "summary": "Experienced Database developer with 25+ years of experience, specializing in Python (Flask), Firebird, Oracle, MariaDB, PostgeSQL. The second specialization is the deployment of microservice architecture and the construction of systems for collecting and processing analytical information",
+    "summary": "Experienced Database developer with 25+ years of experience, specializing in Python (Flask), Firebird, Oracle, MariaDB, PostgeSQL. The second specialization is the deployment of microservice architecture and the construction of systems for collecting and processing analytical information using Clickhouse DB, Prometheus, Grafana Dashboard,MQTT ",
     "experience_title":"Experience",
     "experience": [
         {
@@ -87,7 +87,7 @@
     ],
     "skills_title" : "Skills",
     "skills": ["PostgreSQL","Oracle","Firebird","Informix","Python","С#","Delphi", "Flask" ,"Bootstrap", "Git","CI/CD",
-                "Docker","Kubernetes","Grafana","Home automation","Electronics","Home Assistent"],
+                "Docker","Kubernetes","Grafana","Prometheus","Home automation","Electronics","Home Assistant","MQTT"],
     "langs_title" : "Language skills",
     "langs": ["Ukrainian - native","Russian - high","English - middle"]
 }
