@@ -39,7 +39,8 @@ jobs:
             
             # 2. Оновити код з GitHub
             # Якщо ви вже один раз зробили git clone на сервері:
-            git pull origin master
+            #git pull origin master
+            git pull
             echo "Current Image Tag is: $IMAGE_TAG"
 
             # 3. Додаткові команди після оновлення:
