@@ -88,8 +88,9 @@
     ],
 
     "skills_title" : "Навички",
-    "skills": ["PostgreSQL","Oracle","Firebird","Informix","Python","С#","Delphi", "Flask" ,"Bootstrap", "Git","CI/CD",
-                "Docker","Kubernetes","Grafana","Prometheus","Home automation","Electronics","Home Assistant","MQTT","Apache NiFi","Node-RED"],
+    "skills": ["PostgreSQL","MariaDB","Oracle","Firebird","Informix","Python","С#","Delphi", "Flask" ,"FastAPI","Bootstrap", "Git","CI/CD",
+                "Docker","Kubernetes","Grafana","Prometheus","Home automation","Electronics","Home Assistant","MQTT",
+                "Apache NiFi","Node-RED"],
     "langs_title" : "Володіння мовами",
     "langs": ["Українська - рідна","Російська - вільно","Англійська - середньо"]
 }
